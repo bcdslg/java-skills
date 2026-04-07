@@ -1,0 +1,23 @@
+# Spring AI 配置
+spring:
+  ai:
+    # 阿里云百炼配置（如果使用阿里云服务）
+    alibaba:
+      dashscope:
+        api-key: ${DASHSCOPE_API_KEY:your-api-key-here}
+        # 如果使用本地 Claude，可以注释掉上面的配置
+    
+    # Chat 模型配置
+    chat:
+      client:
+        enabled: true
+
+# 服务器配置
+server:
+  port: 8080
+
+# 日志配置
+logging:
+  level:
+    com.example.skills: DEBUG
+    org.springframework.ai: DEBUG
